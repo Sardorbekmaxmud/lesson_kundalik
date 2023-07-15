@@ -1,14 +1,16 @@
 from rest_framework import serializers
-# from .models import (SubjectModel,SchoolModel,ClassModel,StudentModel,
-#                     TeacherModel,AttendanceModel,GradeModel,ParentsModel,
-#                     PersonModel)
+from .models import StudentModel,TeacherModel,ParentsModel
 
-# class SubjectSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = SubjectModel
-#         fields = ('id','name')
+class ParentsSerializer(serializers.ModelSerializer):
+    model = ParentsModel
+    fields = '__all__'
 
-# class SchoolSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = SchoolModel
-#         fields = ('id','name','address','info')
+class StudentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StudentModel
+        fields = '__all__'
+
+class TeacherSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TeacherModel
+        fields = '__all__'

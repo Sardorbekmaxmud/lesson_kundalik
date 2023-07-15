@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'account',
 
     #third
+    'jazzmin',
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_yasg',
@@ -51,6 +52,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+AUTH_USER_MODEL = 'account.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
